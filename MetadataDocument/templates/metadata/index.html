@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Metadata &amp; Documents Task</title>
+    <meta nama="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body id="listMetadata">
+  <header>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Django Simple Example</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/metadata">Metadata</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/document">Documents</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container mt-4">
+    <div class="float-right"> 
+        <a href="/metadata/add" class="btn btn-sm btn-info">Add New</a>
+    </div> 
+    <h2>Metadata List</h2>
+    <table class="table table-hover mt-4">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Value</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody id="dataTbody">
+            
+        </tbody>
+  </table>
+  </div>
+
+    <script deferred src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
